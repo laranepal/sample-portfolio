@@ -10,7 +10,8 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -45,6 +46,7 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
     public function profile(): HasOne
     {
         return $this->hasOne(Profile::class);

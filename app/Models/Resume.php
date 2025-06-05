@@ -8,8 +8,7 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 class Resume extends Model
 {
     public function uploadable(): MorphTo
-{
-    return $this->morphTo();
-}
-
+    {
+        return $this->morphTo();
+    }
 }
